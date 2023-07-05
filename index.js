@@ -24,28 +24,28 @@ connection.connect((err) => {
 //
 //
 // Quering DB data
-// const query =
-//   "INSERT INTO vibration(device_pid, vibration_value) VALUES(1, -0.32)";
+const query =
+  "INSERT INTO vibration(device_pid, vibration_value) VALUES(1, -0.32)";
 
-// connection.query(query, (err, results) => {
-//   if (err) {
-//     console.error("Error executing MySQL query: " + err.stack);
-//     return;
-//   }
+connection.query(query, (err, results) => {
+  if (err) {
+    console.error("Error executing MySQL query: " + err.stack);
+    return;
+  }
 
-//   console.log("Query results:", results);
-// });
+  console.log("Query results:", results);
+});
 
 //
 //
 //
 //
 // Close DB Connection
-// connection.end((err) => {
-//   if (err) {
-//     console.error("Error closing MySQL connection: " + err.stack);
-//     return;
-//   }
+connection.end((err) => {
+  if (err) {
+    console.error("Error closing MySQL connection: " + err.stack);
+    return;
+  }
 
-//   console.log("MySQL connection closed.");
-// });
+  console.log("MySQL connection closed.");
+});
